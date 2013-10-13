@@ -109,20 +109,25 @@
       <div class="container">
       <div class="row">
         <h2>Some Of My Work</h2>
-        <div class="col-md-4 portfolio-item">
-          <a href="img/PaperInc.jpg">
-            <img src="img/PaperInc.jpg" alt="ira glass poster" width="300px" height="300px"></a>
+        <div class="portfolio-items">
+ 
+
+        <div class="col-md-4">
+          <a href="img/PaperInc.jpg" class="portfolio-item">
+            <img src="img/PaperInc.jpg" alt="" width="300px" height="300px"></a>
         </div>
-        <div class="col-md-4 portfolio-item">
-          <a href="img/NGriffin-Project3_v5.png">
-            <img src="img/NGriffin-Project3_v5.png" alt="ira glass poster" width="300px" height="300px"></a>
+        <div class="col-md-4 ">
+          <a href="img/NGriffin-Project3_v5.png" class="portfolio-item">
+            <img src="img/NGriffin-Project3_v5.png" alt="" width="300px" height="300px"></a>
         </div>
-        <div class="col-md-4 portfolio-item">
-          <a href="img/NGriffin-Project2_v9.jpg">
+        <div class="col-md-4">
+          <a href="img/NGriffin-Project2_v9.jpg" class="portfolio-item">
             <img src="img/NGriffin-Project2_v9.jpg" alt="ira glass poster" width="300px" height="300px"></a>
         </div>
+
+        </div>
      
-        <button type="button" class="btn btn-default">View More</button>
+        <button type="button" class="btn btn-default view-more-btn">View More</button>
 
       </div>
       </div>
@@ -142,12 +147,41 @@
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
   <script>
+    $(document).ready(function(){
+      var bottom = ($(window).outerHeight() - $(window).height()) - 50; // 50 pixel to the bottom of the page; 
+      $(window).scroll(function(){
+          if ($(window).scrollTop() >= bottom ) {
+                  $("#scrollTopButton").fadeTo("slow",.95);
+             } else {
+                  $("#scrollTopButton").fadeOut("slow");
+             }
+      });
+
+      $("#scrollTopButton").click(function(){
+          $('html, body').animate({scrollTop:0}, 'slow');
+          $("#scrollTopButton").fadeOut("slow");
+      });
+  });
   $('#scrollTopButton').click(function(e){
       e.preventDefault();
             $('html,body').animate({scrollTop : 0},340);
         });
 
+
+  $(document).ready(function() {
+
+    $('.portfolio-items').magnificPopup({
+      delegate: '.portfolio-item', // child items selector, by clicking on it popup will open
+      type: 'image',
+      gallery:{enabled:true}
+    });
+
+
+  });
+
+
   </script>
+
   
 
 </body>

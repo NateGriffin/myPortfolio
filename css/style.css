@@ -44,7 +44,7 @@ body {
   box-sizing: border-box; }
 
 /** Defaults **/
-button {
+.view-more-btn {
   margin: 30px;
   margin-left: 0px;
   background: #ff9036 !important;
@@ -86,7 +86,11 @@ header {
 
 a {
   text-decoration: none;
-  color: #030; }
+  color: #030;
+  outline: 0; }
+
+input::-moz-focus-inner {
+  border: 0; }
 
 a:hover {
   text-decoration: none;
@@ -103,13 +107,13 @@ a:hover {
 .logo-N {
   background: #ff9036;
   width: 50px;
-  heiht: 50px;
+  height: 50px;
   text-align: center;
   padding: 10px;
   border-radius: 50%;
   display: inline-block;
   color: #fff;
-  border: 4px solid #fff;
+  border: 4px solid white;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -212,7 +216,7 @@ section {
 
 .my-blog-left-about {
   max-width: 298px;
-  margin: 10px auto;
+  margin: 4px auto;
   text-align: left; }
   .my-blog-left-about .picture {
     width: 100px;
@@ -263,7 +267,7 @@ section {
     padding-top: 40px;
     padding-bottom: 60px; }
   .about-me .about-me-text {
-    margin-top: 50px;
+    margin-top: 10px;
     padding-bottom: 40px; }
   .about-me .about-me-picture {
     display: inline-block;
@@ -465,8 +469,15 @@ footer {
     transition: 0.27s; }
 
 #scrollTopButton {
-  margin-top: 16px;
-  font-size: 20px; }
+  font-size: 30px;
+  position: relative;
+  top: -50px;
+  margin: 0 auto;
+  left: -13px; }
+  #scrollTopButton a:focus, #scrollTopButton a:hover, #scrollTopButton a:active {
+    color: #ffb359;
+    text-decoration: none;
+    outline: 0; }
   #scrollTopButton a:hover i {
     color: #ffb359; }
 
