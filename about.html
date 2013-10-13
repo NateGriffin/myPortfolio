@@ -84,41 +84,46 @@
     </div>
     </div>
   </div>
-<div class="main-content container">
-  <section id="me">
+<div class="main-content">
+  <section id="about-me">
+    <div class="row">
     <h2>About Me</h2>
-    <ul>
-      <li>"link"</li>
-      <li>"link"</li>
-      <li>"link"</li>
-      <li>"link"</li>
-      <li>"link"</li>
-      <li>"link"</li>
-      <li>"link"</li>
-      <li>"link"</li>
-      <li>"link"</li>
-    </ul>
+     <div class="col-md-12">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore atque ab minus nesciunt similique amet commodi suscipit placeat aperiam doloribus soluta dignissimos nam cum corporis magnam itaque ipsam. Laborum amet impedit minima cum a dolorem commodi optio qui excepturi atque ex accusamus voluptate sequi quam quo! Officiis nostrum aut eos doloremque esse! Fugit distinctio veritatis natus aperiam illum? Amet nam ea laborum sapiente incidunt dolore ullam consequuntur voluptatem in quis! Veritatis eius eos ab officiis alias deserunt adipisci nesciunt rerum dolorum. Commodi inventore deserunt nemo rerum molestias ab neque placeat.</p>
+     </div>
+    </div>
   </section>
   <section id="resume">
-    <h2>My Resume</h2>
- <div class="about-me">
-      <div class="container">
-        <div class="row main-about-content">
-        <div class="col-md-3 col-md-push-1 main-about-picture">
-            <div id="my-picture" class="picture slideUp">
-            </div>
-                      <h2>Me(not really)</h2>
+    <div class="content animated slideUp row">
+    <h2>Resume </h2>
+      <div class="col-md-offset-2 col-md-10">
+        <h3>Education</h3>
+        <ul>
+          <li>Currently in the process of completing my AA degree in Engineering.</li>
+          <li>A.S Degree in Programing from Santa Fe College</li>
+          <li>High School Diploma</li>
+        </ul>
+          <h3>Skills</h3>
+        <ul class="skills">
+          <li>HTML(<i class="icon-html5"></i>), CSS(<i class="icon-css3"></i>), and JavaScript(including jQuery)</li>
+          <li> Wordpress and PHP </li>
+          <li>Some experience with Visual C# and the ASP.Net environment as well as Object Oriented Programing</li>
+          <li>Photoshop, Illustrator,Dreamweaver, Fireworks, Graphic Design,Bootstrap Framework</li>
+        
+        </ul>
+        <h3>Work History</h3>
+        <ul>
+          <li>Web Designer/Developer  SF College (January 2013 - present) – Employed as Technical/ Web Development Supporter at Santa Fe College.</li>
+          <li>Web Master for SF Student Government(Summer-Fall 2013)</li>
+          <li>Interned in Web Design and Development at <a href="http://www.352media.com/" target="_blank">352Media</a> Gainesville Fl. Fall of 2012. Duties included designing websites and hand coding the designs.</li>
+          <li>Interned as a Junior Web Developer at the Alachua County BOCC IT department for the Summer of 2012.</li>
+        </ul>
+      
 
-        </div> 
-          <div id="home-about-text" class="about-me-text col-md-push-1 col-md-7">
-            <p>Hi I'm <a href="#">Nate</a>, I'm a <span>Web Developer</span> living in Gainesville, Fl and this is my personal Blog about <span>Front-End Development</p>
-            <p>The easiest way to contact me is to email <a href="#">Me</a>, also please follow me on <a href="#">Twitter</a></p>
-            
-
-           </div>
+      </div>
+      <a href="https://docs.google.com/document/d/1Aw45cXiGOm8oKN0Z4xdLmFACZ01_T9tyj_A-SvUUhQc/edit?usp=sharing" title="download my resume(PDF)" target="_blank"><i class="icon-download"></i></a>
     </div>
-    </div>
-  </div>
+    
   </section>
   <section id="location">
     <h2>My Tools Of Choice</h2>
@@ -150,6 +155,24 @@
       e.preventDefault();
             $('html,body').animate({scrollTop : 0},340);
         });
+
+  //Scroll to Element
+  $(document).ready(function() {
+ $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 800);
+            return false;
+        }
+    }
+});
+    });
 
   </script>
   

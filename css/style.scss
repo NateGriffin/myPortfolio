@@ -1,10 +1,10 @@
 //SCSS Variables 
-$orange:#FF9036;
+$orange:#F7941F;
 $ft-orange:#ffb359;
 $white:#fff;
-$black:#030508;
-$gray:#b9beb2;
-$a-tags: 'a,a:active,a:hover,a:visited';
+$black:#000000;
+$gray:#262321;
+$a-tags: 'a,a:active,a:focus,a:active;a:hover,a:visited';
 
 //END SCSS Variables
 //SCSS Mixins & Functions
@@ -68,6 +68,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  @include prefixer(box-sizing,border-box);
+}
+
 
 
 body {
@@ -75,11 +79,6 @@ body {
   color: $black;
   padding-top: 70px;
   line-height: 1.6em;
-}
-
-* {
-
-  @include prefixer(box-sizing,border-box);
 }
 
 
@@ -95,7 +94,7 @@ body {
 }
 p {
   font-size: 17;
-padding: 7px 0;
+  padding: 7px 0;
 }
 blockquote {
   margin:13px 10px 13px 10px;
@@ -177,10 +176,11 @@ a:hover {
   a {
     transition: 0.3s all;
     padding: 6px;
-    padding-top:18px;
+    padding-top:21px;
     opacity:.87;
     color:$black;
     border-radius:3px;
+    margin:8px 2px 0px 2px;
     &:hover {
       background: $orange;
       /*border:4px solid #554E49;*/
@@ -190,16 +190,10 @@ a:hover {
  
   }
 }
-.dropdown-menu>li>a {
-display: block;
-padding: 3px 20px;
-padding-top:0;
 
-}
 .nav>li>a:hover, .nav>li>a:focus {
   text-decoration: none;
   background-color: $orange;
-  border-radius:0px 0px 3px 3px;
 
 }
 .navbar-fixed-top {
@@ -210,11 +204,20 @@ padding-top:0;
   background: $orange;
   color:$white;
   padding: 24px 6px 6px 6px;
-  border-radius:0px 0px 3px 3px;
 }
 .main-social-nav  {
-  max-width:200px;
-  margin-left:120px;
+  max-width:230px;
+  margin:0px 0px 0px 100px;
+  a {
+    marign:0px;
+  }
+}
+.dropdown-menu>li>a {
+display: block;
+padding: 3px 20px;
+padding-top:0;
+margin:0px;
+
 }
 @media only screen and (min-width: 360px) and (max-width: 767px) { 
  
@@ -228,7 +231,6 @@ padding-top:0;
 
 }
   .main-social-nav {
-    max-width:200px;
     margin:0 auto;
   }
   .main-social-nav li a {
@@ -368,7 +370,7 @@ section {
 .about-header {
     width:100%;
   background:$orange;
-  @include prefixer(background,linear-gradient(100deg, #ff783e 0%, #79332b 67%, #47990f 90%));
+  @include prefixer(background,linear-gradient(100deg, #ff783e 0%, #F08E63 67%, #FD6056 90%));
   background-attachment: scroll;
 
   color:$white;
@@ -606,4 +608,80 @@ footer {
 }
 .icon-css3 {
   color:#016FBA;
+}
+#about-me,#resume,#location {
+  padding-top:100px;
+}
+#location {
+  background:#FD6056;
+}
+#resume {
+  text-align:center;
+  padding-top:150px;
+  background:#F08E63;
+  h2 {
+    text-align:center;
+  }
+  h3 {
+    font-weight: bolder;
+    font-size:20px;
+    padding-top:10px;
+  }
+ li:before {
+    content: "• ";
+    color: $orange;
+    font-size:30px;
+    position:relative;
+    bottom:-3px; /* or whatever color you prefer */
+}
+ ul.skills {
+  li:before {
+    content: "• ";
+    color:$white;
+    text-shadow: -2px 0 $orange, 0 2px $orange, 2px 0 $orange, 0 -2px $orange;
+    font-size:30px;
+    position:relative;
+    bottom:-3px; /* or whatever color you prefer */
+  }
+}
+   .content {
+    padding:20px;
+    box-shadow:0px 3px 4px rgba(50,50,50,0.7);
+    max-width:900px;
+    margin:0 auto;
+    border-radius:5px;
+    background:$white;
+    text-align:left;
+    a,a:focus,a:hover,a:active {
+      color:$orange;
+      text-decoration:none;
+      outline:0;
+    }
+   }
+   i.icon-download {
+    font-size:30px;
+    height:30px;
+    position:relative;
+    bottom:-20px;
+    display:block;
+    width:40px;
+    margin-top:10px;
+    text-align:center;
+    margin:0 auto;
+   }
+}
+.twitter-timeline {
+  border: none;
+  max-width: 100%;
+  min-width: 180px;
+  height: 190px;
+  border-radius:0px;
+   .tweet-box-button  {
+    background:$orange;
+    border:none !important;
+   }
+}
+.timeline {
+  border-radius:0px !important;
+  border:none;
 }

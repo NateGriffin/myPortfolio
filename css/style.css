@@ -32,22 +32,22 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  font-family: 'Source Sans Pro',Arial, sans-serif;
-  color: #030508;
-  padding-top: 70px;
-  line-height: 1.6em; }
-
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  font-family: 'Source Sans Pro',Arial, sans-serif;
+  color: black;
+  padding-top: 70px;
+  line-height: 1.6em; }
+
 /** Defaults **/
 .view-more-btn {
   margin: 30px;
   margin-left: 0px;
-  background: #ff9036 !important;
+  background: #f7941f !important;
   color: white !important;
   border: none !important;
   font-size: 17px;
@@ -59,7 +59,7 @@ p {
 
 blockquote {
   margin: 13px 10px 13px 10px;
-  border-left: 3px solid #ff9036;
+  border-left: 3px solid #f7941f;
   padding: 14px 9px 14px 16px;
   opacity: 0.8; }
 
@@ -81,7 +81,7 @@ header {
     margin: 0; }
 
 .navbar {
-  border-top: 3px solid #ff9036;
+  border-top: 3px solid #f7941f;
   background: white; }
 
 a {
@@ -94,7 +94,7 @@ input::-moz-focus-inner {
 
 a:hover {
   text-decoration: none;
-  color: #030508; }
+  color: black; }
 
 .logo {
   width: 260px;
@@ -105,7 +105,7 @@ a:hover {
   float: left; }
 
 .logo-N {
-  background: #ff9036;
+  background: #f7941f;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -131,38 +131,40 @@ a:hover {
   .navbar-nav a {
     transition: 0.3s all;
     padding: 6px;
-    padding-top: 18px;
+    padding-top: 21px;
     opacity: .87;
-    color: #030508;
-    border-radius: 3px; }
+    color: black;
+    border-radius: 3px;
+    margin: 8px 2px 0px 2px; }
     .navbar-nav a:hover {
-      background: #ff9036;
+      background: #f7941f;
       /*border:4px solid #554E49;*/
       color: #fff; }
 
-.dropdown-menu > li > a {
-  display: block;
-  padding: 3px 20px;
-  padding-top: 0; }
-
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
-  background-color: #ff9036;
-  border-radius: 0px 0px 3px 3px; }
+  background-color: #f7941f; }
 
 .navbar-fixed-top {
   box-shadow: 0px 2px 2px rgba(50, 50, 50, 0.2); }
 
 .active a {
   opacity: 1;
-  background: #ff9036;
+  background: #f7941f;
   color: white;
-  padding: 24px 6px 6px 6px;
-  border-radius: 0px 0px 3px 3px; }
+  padding: 24px 6px 6px 6px; }
 
 .main-social-nav {
-  max-width: 200px;
-  margin-left: 120px; }
+  max-width: 230px;
+  margin: 0px 0px 0px 100px; }
+  .main-social-nav a {
+    marign: 0px; }
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  padding-top: 0;
+  margin: 0px; }
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
   .active a {
@@ -170,11 +172,10 @@ a:hover {
 
   .nav > li > a:hover, .nav > li > a:focus {
     text-decoration: none;
-    background-color: #ff9036;
+    background-color: #f7941f;
     border-radius: 0px; }
 
   .main-social-nav {
-    max-width: 200px;
     margin: 0 auto; }
 
   .main-social-nav li a {
@@ -225,14 +226,14 @@ section {
     margin: 5px;
     border: 2px solid white; }
   .my-blog-left-about a {
-    color: #030508; }
+    color: black; }
 
 .social-nav {
   margin-left: 60px; }
   .social-nav li {
     padding: 0px 4px; }
   .social-nav a {
-    color: #030508;
+    color: black;
     font-size: 32px; }
 
 .brain-blog {
@@ -249,7 +250,7 @@ section {
 
 .about-me {
   width: 100%;
-  background: #ff9036;
+  background: #f7941f;
   -moz-background: linear-gradient(100deg, #ff9036 0%, #d86135 67%, #ff4b12 90%);
   -webkit-background: linear-gradient(100deg, #ff9036 0%, #d86135 67%, #ff4b12 90%);
   background: linear-gradient(100deg, #ff9036 0%, #d86135 67%, #ff4b12 90%);
@@ -279,7 +280,7 @@ section {
 
 .blog-header {
   width: 100%;
-  background: #ff9036;
+  background: #f7941f;
   -moz-background: linear-gradient(100deg, #ff783e 0%, #d85d4e 67%, #ba3324 90%);
   -webkit-background: linear-gradient(100deg, #ff783e 0%, #d85d4e 67%, #ba3324 90%);
   background: linear-gradient(100deg, #ff783e 0%, #d85d4e 67%, #ba3324 90%);
@@ -297,10 +298,10 @@ section {
 
 .about-header {
   width: 100%;
-  background: #ff9036;
-  -moz-background: linear-gradient(100deg, #ff783e 0%, #79332b 67%, #47990f 90%);
-  -webkit-background: linear-gradient(100deg, #ff783e 0%, #79332b 67%, #47990f 90%);
-  background: linear-gradient(100deg, #ff783e 0%, #79332b 67%, #47990f 90%);
+  background: #f7941f;
+  -moz-background: linear-gradient(100deg, #ff783e 0%, #f08e63 67%, #fd6056 90%);
+  -webkit-background: linear-gradient(100deg, #ff783e 0%, #f08e63 67%, #fd6056 90%);
+  background: linear-gradient(100deg, #ff783e 0%, #f08e63 67%, #fd6056 90%);
   background-attachment: scroll;
   color: white;
   text-align: center;
@@ -339,7 +340,7 @@ section {
 .about-left {
   width: 350px;
   height: 350px;
-  background: #ff9036;
+  background: #f7941f;
   display: inline-block; }
 
 .main-about-content {
@@ -363,7 +364,7 @@ section {
 /** Blog Page **/
 .blog-post-header {
   width: 100%;
-  background: #ff9036;
+  background: #f7941f;
   -moz-background: linear-gradient(100deg, #ff783e 0%, #ba3324 90%);
   -webkit-background: linear-gradient(100deg, #ff783e 0%, #ba3324 90%);
   background: linear-gradient(100deg, #ff783e 0%, #ba3324 90%);
@@ -402,11 +403,11 @@ section {
   .blog-list a.post-title {
     padding-bottom: 5px; }
   .blog-list a.post-title:hover {
-    color: #ff9036; }
+    color: #f7941f; }
   .blog-list li {
     margin: 20px;
     padding-bottom: 24px;
-    border-bottom: 4px solid #ff9036;
+    border-bottom: 4px solid #f7941f;
     -moz-border-bottom: linear-gradient(100deg, #ff783e 0%, #d85d4e 67%, #ff4146 90%);
     -webkit-border-bottom: linear-gradient(100deg, #ff783e 0%, #d85d4e 67%, #ff4146 90%);
     border-bottom: linear-gradient(100deg, #ff783e 0%, #d85d4e 67%, #ff4146 90%);
@@ -434,7 +435,7 @@ section {
   width: 300px;
   max-height: 300px;
   padding: 20px;
-  color: #030508;
+  color: black;
   text-align: left;
   background: white;
   margin: 60px auto; }
@@ -442,7 +443,7 @@ section {
     padding: 5px;
     font-size: 20px; }
   .contact-info h1 {
-    color: #ff9036;
+    color: #f7941f;
     font-size: 26px;
     margin: 10px 10px 10px 0px; }
 
@@ -451,7 +452,7 @@ section {
 footer {
   margin: 70px 0 0 0;
   padding-bottom: 80px;
-  border-top: 4px solid #ff9036;
+  border-top: 4px solid #f7941f;
   background: #c6450e;
   -moz-background: linear-gradient(100deg, #ff783e 0%, #e64e0e 90%);
   -webkit-background: linear-gradient(100deg, #ff783e 0%, #e64e0e 90%);
@@ -488,7 +489,7 @@ footer {
   .under-the-header h2 {
     font-size: 25px;
     padding-left: 0px;
-    color: #ff9036; }
+    color: #f7941f; }
 
 .coming-soon-slink {
   background: white;
@@ -516,3 +517,71 @@ footer {
 
 .icon-css3 {
   color: #016FBA; }
+
+#about-me, #resume, #location {
+  padding-top: 100px; }
+
+#location {
+  background: #FD6056; }
+
+#resume {
+  text-align: center;
+  padding-top: 150px;
+  background: #F08E63; }
+  #resume h2 {
+    text-align: center; }
+  #resume h3 {
+    font-weight: bolder;
+    font-size: 20px;
+    padding-top: 10px; }
+  #resume li:before {
+    content: "• ";
+    color: #f7941f;
+    font-size: 30px;
+    position: relative;
+    bottom: -3px;
+    /* or whatever color you prefer */ }
+  #resume ul.skills li:before {
+    content: "• ";
+    color: white;
+    text-shadow: -2px 0 #f7941f, 0 2px #f7941f, 2px 0 #f7941f, 0 -2px #f7941f;
+    font-size: 30px;
+    position: relative;
+    bottom: -3px;
+    /* or whatever color you prefer */ }
+  #resume .content {
+    padding: 20px;
+    box-shadow: 0px 3px 4px rgba(50, 50, 50, 0.7);
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: white;
+    text-align: left; }
+    #resume .content a, #resume .content a:focus, #resume .content a:hover, #resume .content a:active {
+      color: #f7941f;
+      text-decoration: none;
+      outline: 0; }
+  #resume i.icon-download {
+    font-size: 30px;
+    height: 30px;
+    position: relative;
+    bottom: -20px;
+    display: block;
+    width: 40px;
+    margin-top: 10px;
+    text-align: center;
+    margin: 0 auto; }
+
+.twitter-timeline {
+  border: none;
+  max-width: 100%;
+  min-width: 180px;
+  height: 190px;
+  border-radius: 0px; }
+  .twitter-timeline .tweet-box-button {
+    background: #f7941f;
+    border: none !important; }
+
+.timeline {
+  border-radius: 0px !important;
+  border: none; }

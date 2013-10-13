@@ -41,11 +41,11 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html">Home</a></li>
       <li class="dropdown">
-        <a href="# " class="dropdown-toggle" data-toggle="dropdown">About</a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
         <ul class="dropdown-menu">
-          <li><a href="about.html"><i class="icon-user"></i> About Me</li>
-          <li><a href="#"><i class="icon-file"></i> Resume</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#about"> Link</a></li>
+          <li><a href="file:///Users/nategriffin/Sites/myPortfolio/about.html#resume"><i class="icon-file"></i> Resume</a></li>
+          <li><a href="#location"> Link</a></li>
 
         </ul>
       </li>
@@ -97,7 +97,8 @@
         </div>
         <div class="col-md-3">
          <h2>Latest Tweet</h2>
-         <p>I've been around the block and seen just about every combination of variables and syntax in viewport meta tags. What's the correct way to go about it? And maybe I'll comment on the state of browsers today as well.</p>
+         <a class="twitter-timeline" href="https://twitter.com/NateGriffinJr" data-widget-id="352080143566651394">Tweets by @NateGriffinJr</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
         </div>
      
@@ -147,7 +148,7 @@
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
   <script>
-    $(document).ready(function(){
+    /*$(document).ready(function(){
       var bottom = ($(window).outerHeight() - $(window).height()) - 50; // 50 pixel to the bottom of the page; 
       $(window).scroll(function(){
           if ($(window).scrollTop() >= bottom ) {
@@ -161,7 +162,7 @@
           $('html, body').animate({scrollTop:0}, 'slow');
           $("#scrollTopButton").fadeOut("slow");
       });
-  });
+  });*/
   $('#scrollTopButton').click(function(e){
       e.preventDefault();
             $('html,body').animate({scrollTop : 0},340);
