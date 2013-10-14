@@ -219,27 +219,7 @@ padding-top:0;
 margin:0px;
 
 }
-@media only screen and (min-width: 360px) and (max-width: 767px) { 
- 
-  .active a{
-    border-radius:0px;
-  }
-  .nav>li>a:hover, .nav>li>a:focus {
-  text-decoration: none;
-  background-color: $orange;
-  border-radius:0px;
 
-}
-  .main-social-nav {
-    margin:0 auto;
-  }
-  .main-social-nav li a {
-    display:inline-block;
-    float:left;
-    border-radius:50%;
-  }
-
-}
 .main-about-picture {
   text-align:center;
 }
@@ -621,12 +601,24 @@ footer {
   background:#F08E63;
   h2 {
     text-align:center;
+    margin:10px;
   }
   h3 {
     font-weight: bolder;
     font-size:20px;
-    padding-top:10px;
+    padding:9px 0px 6px 0px;
+    border-top:2px solid $ft-orange;
+    border-bottom:1px solid $orange;
+    width:90%;
+    margin:5px 0px 5px 0px;
   }
+  ul {
+    width:90%;
+    span {
+      font-style: italic;
+    }
+  }
+
  li:before {
     content: "• ";
     color: $orange;
@@ -652,22 +644,28 @@ footer {
     border-radius:5px;
     background:$white;
     text-align:left;
+    padding-bottom:80px;
     a,a:focus,a:hover,a:active {
       color:$orange;
       text-decoration:none;
       outline:0;
     }
    }
-   i.icon-download {
-    font-size:30px;
-    height:30px;
+   i.icon-download{
+    font-size:20px;
+    height:20px;
     position:relative;
-    bottom:-20px;
-    display:block;
-    width:40px;
+    float:right;
+    display:inline-block;
+    width:20px;
     margin-top:10px;
     text-align:center;
-    margin:0 auto;
+    top:-70px;
+    opacity:0.5;
+    transition:0.25s ease-in-out;
+   }
+   i.icon-download:hover {
+     opacity:0.9;
    }
 }
 .twitter-timeline {
@@ -684,4 +682,29 @@ footer {
 .timeline {
   border-radius:0px !important;
   border:none;
+}
+@media only screen and (min-width: 340px) and (max-width: 767px) { 
+ 
+  .active a{
+    border-radius:0px;
+  }
+  .nav>li>a:hover, .nav>li>a:focus {
+  text-decoration: none;
+  background-color: $orange;
+  border-radius:0px;
+
+}
+  .main-social-nav {
+    margin:0 auto;
+  }
+  .main-social-nav li a {
+    display:inline-block;
+    float:left;
+    border-radius:50%;
+  }
+  #resume {
+    .content {
+     width: 95%;
+    }
+  }
 }
