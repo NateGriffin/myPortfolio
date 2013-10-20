@@ -2,7 +2,7 @@
 $orange:#F7941F;
 $ft-orange:#ffb359;
 $white:#fff;
-$black:#000000;
+$black:#0b080b;
 $gray:#262321;
 $a-tags: 'a,a:active,a:focus,a:active;a:hover,a:visited';
 
@@ -370,14 +370,15 @@ section {
    .about-header-link {
    background: $white;
    display: block;
-   width: 200px;
-   height: 200px;
+   max-width: 200px;
+   max-height: 200px;
    font-size: 80px;
    padding: 0px;
    border-radius: 50%;
    line-height: 2.3em;
    margin: 26px auto;
-   opacity: .9;
+   color:$black;
+   opacity: 0.87;
   @include prefixer(transition,0.4s all);
 
 }
@@ -701,6 +702,15 @@ footer {
     display:inline-block;
     float:left;
     border-radius:50%;
+  }
+  .about-header {
+     min-height:140px;
+  }
+  .about-header-link {
+    color:#000;
+    background:none;
+    margin:10px;
+    line-height: 1.4em;
   }
   #resume {
     .content {
