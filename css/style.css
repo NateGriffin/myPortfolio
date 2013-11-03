@@ -177,9 +177,6 @@ section {
     font-size: 40px;
     padding: 6px; }
 
-.main-content {
-  padding-top: 40px; }
-
 .main-content, footer {
   text-align: center; }
 
@@ -435,7 +432,7 @@ section {
 /** Contact Page END **/
 /** Footer **/
 footer {
-  margin: 70px 0 0 0;
+  margin: 0px 0 0 0;
   padding-bottom: 80px;
   border-top: 4px solid #f7941f;
   background: #c6450e;
@@ -449,7 +446,8 @@ footer {
   footer p {
     margin: 20px 10px 10px 10px; }
   footer a {
-    color: #ffb359;
+    color: white;
+    text-decoration: underline;
     -moz-transition: 0.27s;
     -webkit-transition: 0.27s;
     transition: 0.27s; }
@@ -494,20 +492,17 @@ footer {
   -webkit-transition: 0.4s all;
   transition: 0.4s all; }
 
-.icon-html5, .icon-css3 {
+.fa-html5, .fa-css3 {
   font-size: 20px; }
 
-.icon-html5 {
+.fa-html5 {
   color: #F1652A; }
 
-.icon-css3 {
+.fa-css3 {
   color: #016FBA; }
 
 #about-me, #resume, #location {
   padding-top: 100px; }
-
-#location {
-  background: #FD6056; }
 
 #resume {
   text-align: center;
@@ -543,20 +538,7 @@ footer {
     position: relative;
     bottom: -3px;
     /* or whatever color you prefer */ }
-  #resume .content {
-    padding: 20px;
-    box-shadow: 0px 3px 4px rgba(50, 50, 50, 0.7);
-    max-width: 900px;
-    margin: 0 auto;
-    border-radius: 5px;
-    background: white;
-    text-align: left;
-    padding-bottom: 80px; }
-    #resume .content a, #resume .content a:focus, #resume .content a:hover, #resume .content a:active {
-      color: #f7941f;
-      text-decoration: none;
-      outline: 0; }
-  #resume i.icon-download {
+  #resume i.fa-download {
     font-size: 20px;
     height: 20px;
     position: relative;
@@ -568,8 +550,12 @@ footer {
     top: -70px;
     opacity: 0.5;
     transition: 0.25s ease-in-out; }
-  #resume i.icon-download:hover {
+  #resume i.fa-download:hover {
     opacity: 0.9; }
+
+#tools {
+  padding-top: 150px;
+  background: #FD6056; }
 
 .twitter-timeline {
   border: none;
@@ -580,6 +566,20 @@ footer {
   .twitter-timeline .tweet-box-button {
     background: #f7941f;
     border: none !important; }
+
+#resume .content, #tools .content {
+  padding: 20px;
+  box-shadow: 0px 3px 4px rgba(50, 50, 50, 0.7);
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: white;
+  text-align: left;
+  padding-bottom: 80px; }
+  #resume .content a, #resume .content a:focus, #resume .content a:hover, #resume .content a:active, #tools .content a, #tools .content a:focus, #tools .content a:hover, #tools .content a:active {
+    color: #f7941f;
+    text-decoration: none;
+    outline: 0; }
 
 .timeline {
   border-radius: 0px !important;
@@ -613,3 +613,24 @@ footer {
 
   #resume .content {
     width: 95%; } }
+#contact {
+  background: #ff5e4e;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 120px; }
+  #contact h3 {
+    padding-top: 40px; }
+  #contact a {
+    opacity: 0.87;
+    transition: 0.25s ease-in-out; }
+  #contact a:hover {
+    opacity: 1; }
+  #contact .fa-envelope {
+    color: white;
+    font-size: 25em;
+    text-shadow: 0px 4px 4px rgba(50, 50, 50, 0.4); }
+  @media only screen and (max-width: 520px) {
+    #contact .fa-envelope {
+      color: white;
+      font-size: 7em;
+      text-shadow: 0px 4px 4px rgba(50, 50, 50, 0.4); } }
